@@ -69,14 +69,14 @@ export default function AboutPage() {
               About
             </span>
             <h1 className="font-display text-3xl md:text-5xl font-bold mt-5 mb-6 tracking-[-0.02em]">
-              A specialized fintech engineering team.
+              The engineering partner behind regulated European fintechs.
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Thar Digital Services is a fintech infrastructure partner — a focused
-              engineering team led by an architect with deep experience designing
-              high-concurrency, bank-grade payment systems. We&apos;ve shipped
-              white-label banking platforms and eBill infrastructure live in the
-              Swiss market, and we deliver globally to European standards.
+              We are a specialized engineering boutique bridging the gap between
+              fast-moving fintech platforms and rigid national payment rails. We do
+              not just supply developers — we provide architect-led teams that
+              design, build, and deploy infrastructure capable of passing the
+              strictest Cantonal bank security audits.
             </p>
           </div>
 

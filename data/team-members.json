@@ -5,7 +5,7 @@
     "role": "Owner & Principal",
     "linkedin": null,
     "expertise": ["Business Strategy", "Client Partnerships", "Operations"],
-    "bio": "Leads the firm's strategic direction and long-term client partnerships across the European market.",
+    "bio": "Leads the firm's strategic direction, commercial operations, and long-term client partnerships across the European market — ensuring seamless delivery and vendor compliance.",
     "image": null
   },
   {
@@ -14,7 +14,7 @@
     "role": "CTO & Lead Architect",
     "linkedin": "https://www.linkedin.com/in/shivendra-singh-tanwar/",
     "expertise": ["Payment Systems Architecture", "EBICS & eBill", "Java / Kotlin Microservices", "Cloud-Native (GKE)"],
-    "bio": "Architect behind the firm's fintech work — designing high-concurrency, bank-grade payment systems on Swiss and European standards (EBICS, eBill, ISO 20022) that have passed bank security audits.",
+    "bio": "The architect behind the firm's fintech execution. Designs and scales high-concurrency, bank-grade payment systems on Swiss and European standards (EBICS, eBill, ISO 20022), with a 100% track record of passing strict financial security audits.",
     "image": null
   }
 ]
