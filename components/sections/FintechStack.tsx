@@ -16,9 +16,9 @@ const pillars = [
   },
   {
     icon: Network,
-    title: 'Swiss Payment Rails',
+    title: 'European Payment Rails',
     items: [
-      'EBICS v2.5 (H003) + v3 (H005)',
+      'EBICS v2.5/v3 — DE · FR · CH · AT',
       'eBill network integration',
       'Swiss QR-bill generation',
       'ISO 20022 (camt / pain)',

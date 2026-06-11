@@ -12,6 +12,7 @@ interface CaseStudy {
   industry: string;
   location: string;
   description: string;
+  glossary?: string;
   challenge: string;
   solution: string;
   securityHurdle?: string;
@@ -27,6 +28,8 @@ const caseStudies: CaseStudy[] = [
     location: 'Switzerland',
     description:
       'A bank-grade software partner layer connecting a financial institution to the national eBill network.',
+    glossary:
+      'In plain English: EBICS is the secure standard banks use to exchange payment files across Germany, France, Switzerland and Austria; eBill is Switzerland\'s service that delivers invoices straight into a customer\'s online banking, reaching ~95% of Swiss banks.',
     challenge:
       'A regional European financial institution needed a white-label invoice-management system with direct, zero-downtime access to the national eBill network — under strict data-privacy rules, and gated by the bank\'s own internal security audit.',
     solution:
@@ -175,6 +178,11 @@ export default function CaseStudiesPage() {
                   {study.description && (
                     <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                       {study.description}
+                    </p>
+                  )}
+                  {study.glossary && (
+                    <p className="text-sm text-muted-foreground leading-relaxed border-l-2 border-primary/40 pl-4 italic">
+                      {study.glossary}
                     </p>
                   )}
                 </div>

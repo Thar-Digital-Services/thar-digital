@@ -123,7 +123,7 @@ export default function ArchitectureDiagram() {
             <Node
               icon={Network}
               title="National eBill Network"
-              subtitle="90+ partner banks"
+              subtitle="≈95% of Swiss financial institutions"
             />
           </div>
 
