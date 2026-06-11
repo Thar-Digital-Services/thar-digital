@@ -17,7 +17,7 @@ interface CaseStudy {
   solution: string;
   securityHurdle?: string;
   outcomes: string[];
-  stack: string[];
+  stack: { label: string; items: string[] }[];
 }
 
 const caseStudies: CaseStudy[] = [
@@ -42,7 +42,11 @@ const caseStudies: CaseStudy[] = [
       'Zero-downtime integration with the national eBill network',
       'Reusable partner layer hardened for regulated environments',
     ],
-    stack: ['Java', 'Spring Boot', 'EBICS v2.5/v3', 'ISO 20022', 'Cloud KMS', 'GKE'],
+    stack: [
+      { label: 'Core', items: ['Java', 'Spring Boot'] },
+      { label: 'Protocols', items: ['EBICS v2.5/v3', 'ISO 20022'] },
+      { label: 'Security & Infra', items: ['Cloud KMS', 'X.509 signing', 'GKE'] },
+    ],
   },
   {
     id: 'white-label-invoicing',
@@ -54,14 +58,18 @@ const caseStudies: CaseStudy[] = [
     challenge:
       'Deliver a multi-tenant, white-label billing platform serving billers, payers, and administrators across web and mobile — with automated bank reconciliation and multi-channel invoice delivery, built to scale with transaction volume.',
     solution:
-      'We built event-driven Kotlin/Vert.x microservices with ISO 20022 camt.054 reconciliation, Vue.js (Vuetify) portals for biller, payer, admin and support roles, a Flutter mobile app, and MongoDB/Redis behind an API gateway fronting the service mesh.',
+      'We built event-driven Kotlin/Vert.x microservices with ISO 20022 camt.054 reconciliation, Vue.js (Vuetify) portals for biller, payer, admin and support roles, and a Flutter mobile app — backed by MongoDB/Redis behind an API gateway. Secure onboarding runs through automated identity-verification (KYC) workflows and legally binding e-signature for contract approval.',
     outcomes: [
       'Automated payment matching from camt.054 bank statements',
       'Multi-channel delivery: eBill, email, post, and SMS',
-      'White-labelled portals deployed across 15+ organisations',
-      'Architected for high-concurrency payment volumes',
+      'White-labelled portals deployed across 15+ organizations, managing access for thousands of end-users',
+      'Architected to process high-concurrency payment volumes (10,000+ daily invoice events without latency)',
     ],
-    stack: ['Kotlin', 'Vert.x', 'Vue 3', 'Vuetify', 'Flutter', 'MongoDB', 'Redis', 'GKE'],
+    stack: [
+      { label: 'Backend', items: ['Kotlin', 'Vert.x'] },
+      { label: 'Frontend', items: ['Vue 3', 'Vuetify', 'Flutter'] },
+      { label: 'Data & Infra', items: ['MongoDB', 'Redis', 'GKE'] },
+    ],
   },
   {
     id: 'cloud-native-payments',
@@ -80,7 +88,11 @@ const caseStudies: CaseStudy[] = [
       'Standards-compliant Swiss QR-bill generation at scale',
       'Autoscaling infrastructure tuned for payment workloads',
     ],
-    stack: ['Kotlin', 'qrbill-generator', 'Terraform', 'GKE', 'ArgoCD', 'GCP + AWS'],
+    stack: [
+      { label: 'Core', items: ['Kotlin', 'qrbill-generator'] },
+      { label: 'Standards', items: ['Swiss QR-bill', 'ISO 20022'] },
+      { label: 'Infra & GitOps', items: ['Terraform', 'GKE', 'ArgoCD', 'GCP + AWS'] },
+    ],
   },
 ];
 
@@ -239,14 +251,23 @@ export default function CaseStudiesPage() {
                 {study.stack && study.stack.length > 0 && (
                   <div>
                     <h3 className="text-lg font-semibold mb-4 text-foreground">Tech Stack</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {study.stack.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="rounded-full border border-border bg-card px-3 py-1 text-sm text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      {study.stack.map((group) => (
+                        <div key={group.label}>
+                          <div className="text-xs font-bold uppercase tracking-[0.14em] text-primary mb-2.5">
+                            {group.label}
+                          </div>
+                          <div className="flex flex-wrap gap-1.5">
+                            {group.items.map((tech) => (
+                              <span
+                                key={tech}
+                                className="border border-border bg-card px-2.5 py-1 text-sm text-muted-foreground"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -266,10 +287,13 @@ export default function CaseStudiesPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center"
+          className="border border-border bg-card p-8 md:p-12 text-center"
         >
-          <Button variant="hero" size="lg" href="/contact">
-            Discuss Your Project
+          <h2 className="font-display text-2xl md:text-3xl font-semibold mb-6">
+            Planning a regulated fintech deployment?
+          </h2>
+          <Button variant="hero" size="xl" href="/contact">
+            Let&apos;s review your architecture
             <ArrowRight className="w-5 h-5" />
           </Button>
         </motion.div>
