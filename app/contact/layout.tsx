@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Thar Digital Services. Book a free discovery call or send us a message.',
+  description: 'Planning a regulated fintech deployment? Talk to an architect about integrating national payment rails or preparing for a bank security audit.',
   alternates: {
     canonical: 'https://thar.digital/contact',
   },

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Script from 'next/script';
 import { SITE_CONFIG } from '@/lib/constants';
 import ContactForm from '@/components/forms/ContactForm';
@@ -57,35 +56,27 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="pt-32 pb-20 relative min-h-screen">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/services-bg.jpg"
-          alt="Contact page background"
-          fill
-          className="object-cover opacity-30"
-          aria-hidden="true"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-      </div>
-
-      <div className="container-custom relative z-10">
+      <div className="pt-32 pb-20">
+      <div className="container-custom">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16 max-w-2xl mx-auto"
+          className="max-w-2xl mb-16"
         >
-          <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Contact Us
+          <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+            <span className="h-px w-7 bg-primary" />
+            Contact
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Let's discuss your project
+          <h1 className="font-display text-3xl md:text-5xl font-bold mt-5 mb-5 tracking-[-0.02em]">
+            Planning a regulated fintech deployment?
           </h1>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            Whether you&apos;re integrating national payment rails or preparing for
+            a bank security audit, let&apos;s discuss your architecture.
+          </p>
         </motion.div>
 
         <motion.div
@@ -146,17 +137,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-medium uppercase tracking-wider text-primary mb-3">
-                    Address
+                    Delivery
                   </h3>
                   <p className="text-muted-foreground">
-                    {SITE_CONFIG.address.line1}
-                    <br />
-                    {SITE_CONFIG.address.line2}
-                    <br />
-                    {SITE_CONFIG.address.line3}
-                    <br />
-                    {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} -{' '}
-                    {SITE_CONFIG.address.zip}
+                    Remote-first · Global delivery, dedicated CET / European overlap.
                   </p>
                 </div>
                 <div>
@@ -170,19 +154,19 @@ export default function ContactPage() {
 
             {/* Calendar Booking Placeholder */}
             <div className="card">
-              <h3 className="text-lg font-semibold mb-3 text-foreground">Book a Discovery Call</h3>
+              <h3 className="text-lg font-semibold mb-3 text-foreground">Talk to an Architect</h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Schedule a free 30-minute call to discuss your project needs and explore how we can help.
+                Schedule a 30-minute architecture review to discuss your compliance
+                requirements, infrastructure needs, and deployment timeline.
               </p>
               <p className="text-muted-foreground/70 text-xs mb-4">
                 Coming soon
               </p>
-              <a
-                href="/contact"
-                className="inline-block px-6 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-semibold text-sm shadow-glow hover:shadow-lg transition-all opacity-50 cursor-not-allowed pointer-events-none"
+              <span
+                className="inline-block px-6 py-3 bg-foreground text-background rounded-sm font-semibold text-sm opacity-50 cursor-not-allowed pointer-events-none"
               >
-                Book a Call
-              </a>
+                Book a review
+              </span>
             </div>
           </motion.div>
         </motion.div>

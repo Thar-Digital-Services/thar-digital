@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thardigital.in/sitemap.xml
+Sitemap: https://thar.digital/sitemap.xml

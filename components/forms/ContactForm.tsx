@@ -71,7 +71,7 @@ export default function ContactForm() {
           {...register('name')}
           type="text"
           id="name"
-          className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 bg-card border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
           placeholder="Your name"
         />
         {errors.name && (
@@ -87,7 +87,7 @@ export default function ContactForm() {
           {...register('email')}
           type="email"
           id="email"
-          className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 bg-card border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
           placeholder="your.email@company.com"
         />
         {errors.email && (
@@ -103,7 +103,7 @@ export default function ContactForm() {
           {...register('company')}
           type="text"
           id="company"
-          className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 bg-card border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors"
           placeholder="Your company"
         />
         {errors.company && (
@@ -119,8 +119,8 @@ export default function ContactForm() {
           {...register('message')}
           id="message"
           rows={5}
-          className="w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-          placeholder="Tell us about your project..."
+          className="w-full px-4 py-3 bg-card border border-border rounded-sm text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+          placeholder="Tell us about the payment rails, compliance bar, or infrastructure you need to build..."
         />
         {errors.message && (
           <p className="mt-1 text-sm text-red-muted">{errors.message.message}</p>
@@ -139,13 +139,13 @@ export default function ContactForm() {
       </div>
 
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400">
+        <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-sm text-green-400">
           Thank you! We'll get back to you soon.
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="p-4 bg-red-muted/20 border border-red-muted/50 rounded-lg text-red-muted">
+        <div className="p-4 bg-red-muted/20 border border-red-muted/50 rounded-sm text-red-muted">
           Something went wrong. Please try again or email us directly.
         </div>
       )}
@@ -153,7 +153,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full px-8 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-semibold shadow-glow hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full px-8 py-3 bg-foreground text-background rounded-sm font-semibold hover:bg-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>

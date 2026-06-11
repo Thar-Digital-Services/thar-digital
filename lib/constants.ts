@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   tagline: 'Bank-grade fintech infrastructure for the European market',
   description: 'Thar Digital Services is a fintech infrastructure partner. We build white-label payment ecosystems and eBill integrations engineered to meet the security requirements of Swiss bank audits — on the EBICS, QR-bill, and ISO 20022 standards that run Switzerland\'s national payment rails.',
   url: 'https://thar.digital',
-  email: 'tech@thardigital.in',
+  email: 'tech@thar.digital',
   phone: '+91 90790 92676',
   address: {
     line1: 'H No. B-3-339',
@@ -18,7 +18,7 @@ export const SITE_CONFIG = {
     zip: '334001',
     country: 'India',
   },
-  hours: 'Mon-Fri 9:00AM – 5:00PM',
+  hours: 'Mon–Fri 9:00 AM – 5:00 PM (IST) — dedicated overlap with CET / European time zones',
   linkedin: 'https://www.linkedin.com/company/thar-digital-services/',
 } as const;
 
