@@ -2,19 +2,19 @@
   {
     "id": "1",
     "name": "Sarandha Tanwar",
-    "role": "Owner, Proprietor",
+    "role": "Owner & Principal",
     "linkedin": null,
-    "expertise": ["Business Strategy", "Operations", "Company Leadership"],
-    "bio": "Owner of Thar Digital Services, leading the company's strategic direction and operations.",
+    "expertise": ["Business Strategy", "Client Partnerships", "Operations"],
+    "bio": "Leads the firm's strategic direction and long-term client partnerships across the European market.",
     "image": null
   },
   {
     "id": "2",
     "name": "Shivendra Singh Tanwar",
-    "role": "CTO",
+    "role": "CTO & Lead Architect",
     "linkedin": "https://www.linkedin.com/in/shivendra-singh-tanwar/",
-    "expertise": ["System Architecture", "Technical Leadership", "Product Development"],
-    "bio": "CTO with extensive experience in building scalable systems and leading engineering teams.",
+    "expertise": ["Payment Systems Architecture", "EBICS & eBill", "Java / Kotlin Microservices", "Cloud-Native (GKE)"],
+    "bio": "Architect behind the firm's fintech work — designing high-concurrency, bank-grade payment systems on Swiss and European standards (EBICS, eBill, ISO 20022) that have passed bank security audits.",
     "image": null
   }
 ]

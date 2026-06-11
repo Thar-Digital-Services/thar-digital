@@ -7,13 +7,31 @@ import { TeamMember } from '@/types';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Thar Digital Services: our mission, leadership philosophy, engineering culture, and meet our team.',
+  description: 'A specialized fintech engineering team, led by an architect — building bank-grade payment infrastructure for the European market with global delivery and a Swiss track record.',
   alternates: {
     canonical: 'https://thar.digital/about',
   },
 };
 
 const teamMembers = teamMembersData as TeamMember[];
+
+const principles = [
+  {
+    title: 'Architect-led delivery',
+    description:
+      'An architect owns the system design, security model, and compliance mapping. Engineers build against that blueprint — so quality and risk are controlled from the top down.',
+  },
+  {
+    title: 'Swiss-market track record',
+    description:
+      'Our work runs in production in one of the world’s most regulated banking markets — and has passed the security audits that come with it.',
+  },
+  {
+    title: 'Discreet by default',
+    description:
+      'We work under strict NDAs and white-label terms, and never publish client names. The work speaks for itself; the names stay private.',
+  },
+];
 
 export default function AboutPage() {
   const breadcrumbSchema = {
@@ -42,120 +60,120 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <div className="pt-20 pb-20">
-      {/* About Us Section with Background */}
-      <section className="relative py-8 mb-0 bg-gradient-to-br from-background via-background to-primary/5">
-        {/* Background Pattern/Decoration */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container-custom relative z-10">
-          {/* About Us Heading */}
-          <div className="text-center max-w-5xl mx-auto mb-6">
-            <span className="text-primary text-sm font-medium uppercase tracking-wider">
-              About Us
+      <div className="pt-32 pb-20">
+        <div className="container-custom">
+          {/* Intro */}
+          <div className="max-w-3xl mb-16">
+            <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+              <span className="h-px w-7 bg-primary" />
+              About
             </span>
-            <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-              Thar Digital Services
+            <h1 className="font-display text-3xl md:text-5xl font-bold mt-5 mb-6 tracking-[-0.02em]">
+              A specialized fintech engineering team.
             </h1>
-            <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              A technology partner helping startups and scale-ups build and operate enterprise-grade software products.
-              <br className="hidden sm:block" />
-              The company provides reliable engineering teams and works closely with clients to support product development, scalability, and long-term growth.
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Thar Digital Services is a fintech infrastructure partner — a focused
+              engineering team led by an architect with deep experience designing
+              high-concurrency, bank-grade payment systems. We&apos;ve shipped
+              white-label banking platforms and eBill infrastructure live in the
+              Swiss market, and we deliver globally to European standards.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Divider */}
-      <div className="border-t border-border/30 my-0"></div>
-
-      {/* Our Team Section with Different Background */}
-      <section className="relative pt-12 pb-20">
-        {/* Darker Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/cta-bg.jpg"
-            alt="Team section background"
-            fill
-            className="object-cover opacity-40"
-            aria-hidden="true"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background/95" />
-        </div>
-
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-12">
-            <span className="text-primary text-sm font-medium uppercase tracking-wider">
-              Our Team
-            </span>
-            
+          {/* Principles */}
+          <div className="swiss-grid grid-cols-1 md:grid-cols-3 mb-20">
+            {principles.map((p) => (
+              <div key={p.title} className="p-7 md:p-8">
+                <h2 className="font-display text-lg font-semibold mb-3">
+                  {p.title}
+                </h2>
+                <p className="text-muted-foreground text-[0.95rem] leading-relaxed">
+                  {p.description}
+                </p>
+              </div>
+            ))}
           </div>
 
-          {/* Team Members Grid */}
+          {/* Leadership */}
+          <div className="max-w-3xl mb-10">
+            <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+              <span className="h-px w-7 bg-primary" />
+              Leadership
+            </span>
+            <h2 className="font-display text-2xl md:text-4xl font-semibold mt-5 tracking-[-0.02em]">
+              The people behind the architecture.
+            </h2>
+          </div>
+
           {teamMembers.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="swiss-grid grid-cols-1 md:grid-cols-2">
               {teamMembers.map((member) => (
-                <div key={member.id} className="card text-center group">
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={128}
-                      height={128}
-                      className="rounded-full mx-auto mb-4 w-32 h-32 object-cover"
-                    />
-                  ) : (
-                    <div className="w-32 h-32 rounded-full mx-auto mb-4 bg-gradient-primary flex items-center justify-center text-2xl font-bold text-primary-foreground">
-                      {member.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')
-                        .toUpperCase()}
+                <div key={member.id} className="p-8">
+                  <div className="flex items-center gap-4 mb-5">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={64}
+                        height={64}
+                        className="rounded-full w-16 h-16 object-cover"
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-foreground flex items-center justify-center text-lg font-bold text-background shrink-0">
+                        {member.name
+                          .split(' ')
+                          .map((n) => n[0])
+                          .join('')
+                          .toUpperCase()}
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="font-display text-xl font-semibold">
+                        {member.name}
+                      </h3>
+                      <p className="text-primary text-sm font-medium">
+                        {member.role}
+                      </p>
                     </div>
-                  )}
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-primary mb-4">{member.role}</p>
+                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed mb-5">
+                    {member.bio}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {member.expertise.map((skill) => (
+                      <span
+                        key={skill}
+                        className="border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
                   {member.linkedin && (
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-4"
+                      className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
                       aria-label={`${member.name} LinkedIn`}
                     >
                       <FaLinkedin className="h-5 w-5" />
                       <span className="text-sm">LinkedIn</span>
                     </a>
                   )}
-                  <div className="mb-4">
-                    <p className="text-sm text-muted-foreground mb-2">Core Expertise</p>
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {member.expertise.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-2 py-1 bg-card border border-border rounded text-xs text-muted-foreground"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm">{member.bio}</p>
                 </div>
               ))}
             </div>
           ) : (
-            <div className="card text-center">
+            <div className="card">
               <p className="text-muted-foreground">Team profiles coming soon...</p>
             </div>
           )}
         </div>
-      </section>
-    </div>
+      </div>
     </>
   );
 }
