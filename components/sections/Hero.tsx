@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
@@ -33,9 +32,15 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="flex flex-col justify-between gap-10 p-6 md:p-10"
             >
-              <h1 className="font-display font-bold leading-[1.0] tracking-[-0.02em] text-4xl md:text-5xl lg:text-6xl">
-                Bank-grade <span className="text-gradient">fintech infrastructure</span>.
-              </h1>
+              <div>
+                <h1 className="font-display font-bold leading-[1.0] tracking-[-0.02em] text-4xl md:text-5xl lg:text-6xl">
+                  Bank-Grade <span className="text-gradient">Fintech Infrastructure</span>.
+                </h1>
+                <h2 className="font-sans font-normal tracking-normal text-muted-foreground text-lg md:text-xl leading-relaxed mt-6 max-w-2xl">
+                  We build white-label payment ecosystems and eBill integrations
+                  that pass rigorous Swiss bank security audits.
+                </h2>
+              </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="hero" size="xl" href="/case-studies">
                   Read the case studies
@@ -53,13 +58,13 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.12 }}
               className="flex flex-col justify-center gap-4 bg-card p-6 md:p-10"
             >
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                We build white-label payment ecosystems and eBill integrations
-                that pass rigorous Swiss bank security audits.
-              </p>
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
+                The standard
+              </span>
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                 Engineered on the EBICS, QR-bill and ISO&nbsp;20022 standards that
-                run Switzerland&apos;s national payment rails.
+                run Switzerland&apos;s national payment rails — the same rails used
+                across Germany, France, Switzerland and Austria.
               </p>
             </motion.div>
           </div>
@@ -93,29 +98,25 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mb-5">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground mb-6">
               Trusted in production by
             </p>
-            <a
-              href="https://billte.ch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex flex-col gap-2"
-            >
-              <div className="h-16 px-8 flex items-center justify-center border border-border bg-card transition-colors group-hover:border-foreground/30">
-                <Image
-                  src="https://billte.ch/assets/billte-logo-BfM7_FDN.png"
-                  alt="Billte — Digital Billing Solutions"
-                  width={120}
-                  height={40}
-                  className="h-8 object-contain"
-                />
-              </div>
-              <span className="text-xs text-muted-foreground">
-                Swiss Fintech · Digital Billing Solutions
-              </span>
-            </a>
+            <div className="swiss-grid mx-auto max-w-4xl grid-cols-1 sm:grid-cols-3">
+              {[
+                'A leading Swiss digital billing provider',
+                'Regional Swiss cantonal banks',
+                'Enterprise fintech ecosystems',
+              ].map((label) => (
+                <div
+                  key={label}
+                  className="px-6 py-5 text-sm font-medium text-foreground"
+                >
+                  {label}
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>

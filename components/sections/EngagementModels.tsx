@@ -10,7 +10,7 @@ const models = [
     description:
       'Full-time engineering teams that work exclusively on your product. Complete integration with your workflows, tools, and culture.',
     features: [
-      'Senior engineers only',
+      'Architect-Led Engineering',
       'Your timezone overlap',
       'Direct communication',
       'Long-term stability',

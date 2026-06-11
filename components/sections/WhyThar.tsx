@@ -38,9 +38,9 @@ const reasons = [
 
 export default function WhyThar() {
   return (
-    <section className="section-padding bg-gradient-surface relative">
+    <section className="section-padding bg-muted relative">
       {/* Subtle accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-border" />
 
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

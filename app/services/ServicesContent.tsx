@@ -1,125 +1,127 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  Users,
-  Server,
-  Cloud,
-  Layout,
-  Database,
-  Shield,
-  BarChart3,
-  ArrowRight,
-} from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    id: 'dedicated-teams',
-    title: 'Dedicated Engineering Teams',
+    title: 'White-Label Banking & Billing Platforms',
     description:
-      'Long-term, integrated engineering teams that become an extension of your company.',
-    icon: Users,
+      'Multi-tenant biller, payer, and admin portals that fintechs and banks ship under their own brand — web and mobile.',
+    stack: ['Vue.js', 'Vuetify', 'Node.js', 'Flutter'],
   },
   {
-    id: 'backend-api',
-    title: 'Backend & API Development',
+    title: 'Core Banking & Payment APIs',
     description:
-      'Scalable, secure backend systems and RESTful/GraphQL APIs built with best practices.',
-    icon: Server,
+      'Scalable, secure backend microservices and API gateways built for high-concurrency transaction processing and national clearing systems.',
+    stack: ['Java Spring Boot', 'Kotlin / Vert.x', 'RabbitMQ'],
   },
   {
-    id: 'cloud-devops',
-    title: 'Cloud & DevOps',
+    title: 'European Payment-Standard Integration',
     description:
-      'AWS, GCP, and Azure infrastructure, CI/CD pipelines, and infrastructure as code.',
-    icon: Cloud,
+      'Native integration with EBICS v2.5/v3 (DE · FR · CH · AT), the eBill network, Swiss QR-bill, and ISO 20022 (camt / pain) messaging.',
+    stack: ['EBICS', 'eBill', 'QR-bill', 'ISO 20022'],
   },
   {
-    id: 'frontend',
-    title: 'Frontend Development',
+    title: 'Document & QR-Bill Generation',
     description:
-      'Modern web and mobile applications with React, Next.js, React Native, and Flutter.',
-    icon: Layout,
+      'High-volume invoice and statement generation — templated PDFs, watermarking, and standards-compliant Swiss QR-bill rendering at scale.',
+    stack: ['PDF generation', 'Swiss QR-bill', 'Templating'],
   },
   {
-    id: 'architecture',
-    title: 'System Architecture & Scalability',
+    title: 'Financial Integrations & Compliance Pipelines',
     description:
-      'Design and implement scalable, maintainable system architectures for growth.',
-    icon: Database,
+      'High-trust modules engineered for regulated environments: automated identity-verification (KYC) workflows, secure e-sign, payment reconciliation, and third-party financial integrations.',
+    stack: ['KYC workflows', 'e-sign', 'camt.054 reconciliation'],
   },
   {
-    id: 'data-engineering',
-    title: 'Data Engineering & Integrations',
+    title: 'Cloud-Native DevOps',
     description:
-      'Data pipelines, ETL processes, and third-party API integrations.',
-    icon: BarChart3,
+      'Kubernetes deployments on GKE with GCP provisioning, ArgoCD GitOps, and Terraform IaC — multi-cloud across GCP and AWS, with Swiss / EU data residency.',
+    stack: ['GKE', 'GCP', 'ArgoCD', 'Terraform'],
   },
   {
-    id: 'security',
     title: 'Security & Compliance',
     description:
-      'Security audits, compliance readiness (SOC 2, GDPR), and secure development practices.',
-    icon: Shield,
+      'Engineered to pass Cantonal bank security audits — EBICS compliance, data-residency enforcement, HSM-backed key management and X.509 signing, on top of SOC 2 / GDPR baselines.',
+    stack: ['Cantonal bank audits', 'EBICS compliance', 'Data residency', 'Cloud KMS'],
+  },
+  {
+    title: 'Legacy Modernization',
+    description:
+      'Migrating monolithic billing and banking systems to event-driven microservices — incrementally, with zero downtime, using the strangler pattern.',
+    stack: ['Monolith → microservices', 'Zero-downtime', 'Strangler pattern'],
+  },
+  {
+    title: 'Architect-Led Engineering Teams',
+    description:
+      'Long-term teams led by an architect and integrated as an extension of your fintech — the heavy architectural lifting handled in-house.',
+    stack: ['Dedicated', 'Architect-led', 'Long-term'],
+  },
+];
+
+const process = [
+  {
+    title: 'Discovery — Architecture & Compliance Mapping',
+    description:
+      'Before a line of code: we map your architecture, payment rails, threat model, and the specific audit and compliance bar you have to clear.',
+  },
+  {
+    title: 'Architecture & Team Formation',
+    description:
+      'An architect designs the system and risk controls up front, then we staff the right engineers against that blueprint — vetted for depth and communication.',
+  },
+  {
+    title: 'Delivery & Communication',
+    description:
+      'Regular sprints, transparent reporting, and time-zone overlap. We work in your tooling — Jira, Slack, GitHub — so you always know where things stand.',
+  },
+  {
+    title: 'Security-First Quality Assurance',
+    description:
+      'Code reviews and automated testing, plus security-first deployment, penetration-testing readiness, and strict audit logging — built for manual bank review, not just scanners.',
+  },
+  {
+    title: 'Scaling & Long-Term Support',
+    description:
+      'GitOps-driven delivery that scales with you. Long-term partnerships mean we know your codebase deeply and support you at any stage.',
   },
 ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 export default function ServicesContent() {
   return (
-    <div className="pt-32 pb-20 relative min-h-screen">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/services-bg.jpg"
-          alt="Technology services background"
-          fill
-          className="object-cover opacity-30"
-          aria-hidden="true"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
-      </div>
-
-      <div className="container-custom relative z-10">
+    <div className="pt-32 pb-20">
+      <div className="container-custom">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16 max-w-4xl mx-auto"
+          className="max-w-3xl mb-14"
         >
-          <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Our Services
+          <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+            <span className="h-px w-7 bg-primary" />
+            Capabilities
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Full-stack engineering expertise
+          <h1 className="font-display text-3xl md:text-5xl font-bold mt-5 mb-5 tracking-[-0.02em]">
+            A specialized arsenal for European fintechs.
           </h1>
           <p className="text-muted-foreground text-lg">
-            Enterprise-level engineering services designed to help startups and
-            scale-ups build, scale, and operate reliable software products.
+            Not a menu of generic developer skills — the specific capabilities we
+            use to build and operate regulated payment infrastructure that passes
+            bank security audits.
           </p>
         </motion.div>
 
@@ -129,153 +131,102 @@ export default function ServicesContent() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          className="swiss-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-20"
         >
-          {services.map((service) => {
-            const IconComponent = service.icon;
-            return (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-elevated"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <IconComponent className="w-6 h-6 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold mb-3 text-foreground">
-                  {service.title}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {service.description}
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity"
-                >
-                  Get started
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            );
-          })}
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              variants={itemVariants}
+              className="flex flex-col p-7 md:p-8 transition-colors hover:bg-card"
+            >
+              <span className="font-display font-bold text-sm text-primary tracking-wide tabular-nums">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <h2 className="font-display text-lg font-semibold mt-5 mb-2.5">
+                {service.title}
+              </h2>
+              <p className="text-muted-foreground text-[0.95rem] leading-relaxed mb-5">
+                {service.description}
+              </p>
+              <div className="mt-auto flex flex-wrap gap-1.5">
+                {service.stack.map((tag) => (
+                  <span
+                    key={tag}
+                    className="border border-border px-2.5 py-1 text-xs text-muted-foreground"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* How We Work Section */}
+        {/* How We Work */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-20 pt-20 border-t border-border/30"
         >
-          {/* Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <span className="text-primary text-sm font-medium uppercase tracking-wider">
-              How We Work
+          <div className="max-w-3xl mb-12">
+            <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+              <span className="h-px w-7 bg-primary" />
+              How we work
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mt-4 mb-6">
-              A proven process designed to reduce risk
+            <h2 className="font-display text-2xl md:text-4xl font-semibold mt-5 mb-5 tracking-[-0.02em]">
+              A process built around risk, not just delivery.
             </h2>
             <p className="text-muted-foreground text-lg">
-              Our structured approach ensures successful outcomes for startups and scale-ups.
+              How we handle the questions a regulated institution actually asks —
+              compliance, security, and auditability — at every stage.
             </p>
           </div>
 
-          {/* Process Steps */}
-          <div className="space-y-6 mb-12">
-            {[
-              {
-                title: 'Discovery & Alignment',
-                description:
-                  'We start by understanding your business goals, technical requirements, and team culture. This ensures we are aligned from day one.',
-              },
-              {
-                title: 'Team Formation',
-                description:
-                  'We carefully match engineers with the right skills and experience to your project needs. Each team member is vetted for technical depth and communication skills.',
-              },
-              {
-                title: 'Delivery & Communication',
-                description:
-                  'Regular standups, sprint planning, and transparent communication. We use tools like Jira, Slack, and GitHub to keep everyone in sync.',
-              },
-              {
-                title: 'Quality Assurance',
-                description:
-                  'Code reviews, automated testing, and quality gates ensure every deliverable meets enterprise standards before it reaches production.',
-              },
-              {
-                title: 'Scaling & Long-Term Support',
-                description:
-                  'As you grow, we scale with you. Long-term partnerships mean we understand your codebase deeply and can support you at any stage.',
-              },
-            ].map((step, index) => (
+          <div className="swiss-grid grid-cols-1 mb-20">
+            {process.map((step, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
+                key={step.title}
+                initial={{ opacity: 0, x: -16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative p-6 rounded-xl bg-card border border-border hover:border-primary/30 transition-all"
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="grid grid-cols-[3rem_1fr] gap-4 p-7 md:grid-cols-[5rem_1fr] md:gap-8 md:p-8"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-xl bg-transparent group-hover:border-primary/50 transition-colors">
-                    {index + 1}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-foreground">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                <span className="font-display font-bold text-primary text-lg tabular-nums">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <h3 className="font-display text-lg font-semibold mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
-
-          {/* Additional Info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="p-6 rounded-xl bg-card border border-border"
-            >
-              <h3 className="text-lg font-semibold mb-3 text-foreground">Communication</h3>
-              <p className="text-muted-foreground">
-                Daily standups, weekly syncs, and transparent reporting. We maintain time zone
-                overlap for real-time collaboration.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-6 rounded-xl bg-card border border-border"
-            >
-              <h3 className="text-lg font-semibold mb-3 text-foreground">Tools We Use</h3>
-              <p className="text-muted-foreground">
-                Jira, Slack, GitHub, Figma, and your preferred development tools. We adapt to your
-                workflow.
-              </p>
-            </motion.div>
-          </div>
         </motion.div>
 
-        {/* Let's Connect CTA */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mt-20 pt-20 border-t border-border/30"
+          className="border border-border bg-card p-8 md:p-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
         >
-          <Button variant="hero" size="lg" href="/contact">
-            Let's Connect
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold">
+              Have a regulated build in mind?
+            </h2>
+            <p className="text-muted-foreground text-lg mt-2">
+              Tell us about the payment rails, compliance bar, and timeline.
+            </p>
+          </div>
+          <Button variant="hero" size="xl" href="/contact">
+            Talk to an architect
             <ArrowRight className="w-5 h-5" />
           </Button>
         </motion.div>

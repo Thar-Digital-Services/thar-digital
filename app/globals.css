@@ -17,54 +17,54 @@
     /* kept for backward-compat with any --font-inter references */
     --font-inter: var(--font-sans);
 
-    /* Core backgrounds — warm off-white paper */
-    --background: 45 20% 95%;
-    --foreground: 222 24% 14%;
+    /* Core backgrounds — clean institutional white (RBI-style), neutral-cool */
+    --background: 210 16% 99%;
+    --foreground: 220 26% 10%;
 
-    /* Cards and elevated surfaces — slightly brighter paper */
-    --card: 48 30% 98%;
-    --card-foreground: 222 24% 14%;
+    /* Cards and elevated surfaces — white */
+    --card: 210 40% 99.8%;
+    --card-foreground: 220 26% 10%;
 
     /* Popover */
-    --popover: 48 30% 98%;
-    --popover-foreground: 222 24% 14%;
+    --popover: 210 40% 99.8%;
+    --popover-foreground: 220 26% 10%;
 
-    /* Primary — Swiss red accent (used sparingly: kickers, markers, ticks) */
-    --primary: 4 68% 47%;
-    --primary-foreground: 45 24% 97%;
+    /* Primary — bold red accent (plays the role of Raiffeisen's yellow) */
+    --primary: 4 70% 46%;
+    --primary-foreground: 210 40% 99%;
 
-    /* Secondary — muted paper */
-    --secondary: 44 16% 90%;
-    --secondary-foreground: 222 24% 16%;
+    /* Secondary — light gray for section bands */
+    --secondary: 214 16% 95%;
+    --secondary-foreground: 220 26% 14%;
 
-    /* Muted — subtle backgrounds + secondary text (ink-2) */
-    --muted: 44 18% 92%;
-    --muted-foreground: 222 12% 40%;
+    /* Muted — light gray section bands + secondary text (ink-2) */
+    --muted: 214 17% 95.5%;
+    --muted-foreground: 218 13% 40%;
 
     /* Accent — same red family */
-    --accent: 4 68% 47%;
-    --accent-foreground: 45 24% 97%;
+    --accent: 4 70% 46%;
+    --accent-foreground: 210 40% 99%;
 
     /* Destructive */
     --destructive: 4 72% 45%;
-    --destructive-foreground: 45 24% 97%;
+    --destructive-foreground: 210 40% 99%;
 
-    /* Borders and inputs — hairline rule */
-    --border: 42 14% 84%;
-    --input: 42 14% 84%;
-    --ring: 4 68% 47%;
+    /* Borders and inputs — clean hairline rule */
+    --border: 214 16% 89%;
+    --input: 214 16% 89%;
+    --ring: 4 70% 46%;
 
     /* Swiss = sharp corners */
     --radius: 0.125rem;
 
     /* Custom tokens */
-    --rule: 42 14% 84%;
+    --rule: 214 16% 89%;
     --gradient-primary: none;
     --gradient-accent: none;
     --gradient-surface: none;
     --shadow-glow: none;
-    --shadow-card: 0 1px 0 0 hsl(42 14% 84%);
-    --shadow-elevated: 0 8px 30px -18px hsl(222 24% 14% / 0.25);
+    --shadow-card: 0 1px 0 0 hsl(214 16% 89%);
+    --shadow-elevated: 0 8px 30px -18px hsl(220 26% 10% / 0.16);
   }
 
   * {

@@ -3,8 +3,8 @@ import Script from 'next/script';
 import ServicesContent from './ServicesContent';
 
 export const metadata: Metadata = {
-  title: 'Services',
-  description: 'Comprehensive engineering services: Dedicated teams, backend development, cloud & DevOps, frontend, system architecture, data engineering, and security.',
+  title: 'Capabilities',
+  description: 'A specialized arsenal for European fintechs: white-label banking platforms, core banking & payment APIs, EBICS/eBill/QR-bill integration, compliance pipelines, cloud-native DevOps on GKE, and bank-grade security.',
   alternates: {
     canonical: 'https://thar.digital/services',
   },

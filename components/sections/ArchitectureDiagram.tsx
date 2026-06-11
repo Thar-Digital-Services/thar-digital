@@ -6,7 +6,7 @@ const partnerBlocks = ['EBICS client', 'Signing / KMS', 'ISO 20022', 'QR-bill'];
 
 export default function ArchitectureDiagram() {
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-muted">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -5,13 +5,6 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'billte.ch',
-        pathname: '/assets/**',
-      },
-    ],
     // Required for static export - images won't be optimized by Next.js
     unoptimized: true,
   },
