@@ -112,13 +112,13 @@ export default function CaseStudiesPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Case Studies',
-        item: 'https://thardigital.in/case-studies',
+        item: 'https://thar.digital/case-studies',
       },
     ],
   };

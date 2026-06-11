@@ -6,9 +6,9 @@
 
 export const siteConfig = {
   name: 'Thar Digital Services',
-  url: 'https://thardigital.in',
+  url: 'https://thar.digital',
   description: 'Thar Digital Services is a fintech infrastructure partner building white-label payment ecosystems and eBill integrations that pass Swiss bank security audits — on EBICS, QR-bill, and ISO 20022 standards.',
-  ogImage: 'https://thardigital.in/images/logos/logo-dark.png',
+  ogImage: 'https://thar.digital/images/logos/logo-dark.png',
   twitterHandle: '@thardigital', // TODO: Add actual Twitter handle
 } as const;
 

@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   name: 'Thar Digital Services',
   tagline: 'Bank-grade fintech infrastructure for the European market',
   description: 'Thar Digital Services is a fintech infrastructure partner. We build white-label payment ecosystems and eBill integrations engineered to meet the security requirements of Swiss bank audits — on the EBICS, QR-bill, and ISO 20022 standards that run Switzerland\'s national payment rails.',
-  url: 'https://thardigital.in',
+  url: 'https://thar.digital',
   email: 'tech@thardigital.in',
   phone: '+91 90790 92676',
   address: {

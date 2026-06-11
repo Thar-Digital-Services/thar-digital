@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy Policy for Thar Digital Services',
   alternates: {
-    canonical: 'https://thardigital.in/privacy-policy',
+    canonical: 'https://thar.digital/privacy-policy',
   },
 };
 

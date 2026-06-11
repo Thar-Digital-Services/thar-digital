@@ -11,54 +11,60 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+    /* Swiss Institutional — light paper / ink, single disciplined red accent */
+    --font-sans: 'Archivo', system-ui, -apple-system, sans-serif;
+    --font-display: 'Archivo Expanded', 'Archivo', system-ui, sans-serif;
+    /* kept for backward-compat with any --font-inter references */
+    --font-inter: var(--font-sans);
 
-    /* Core backgrounds */
-    --background: 222 47% 6%;
-    --foreground: 210 20% 98%;
+    /* Core backgrounds — warm off-white paper */
+    --background: 45 20% 95%;
+    --foreground: 222 24% 14%;
 
-    /* Cards and elevated surfaces */
-    --card: 222 47% 8%;
-    --card-foreground: 210 20% 98%;
+    /* Cards and elevated surfaces — slightly brighter paper */
+    --card: 48 30% 98%;
+    --card-foreground: 222 24% 14%;
 
     /* Popover */
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 48 30% 98%;
+    --popover-foreground: 222 24% 14%;
 
-    /* Primary - Deep Navy Blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 6%;
+    /* Primary — Swiss red accent (used sparingly: kickers, markers, ticks) */
+    --primary: 4 68% 47%;
+    --primary-foreground: 45 24% 97%;
 
-    /* Secondary - Slate */
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 20% 90%;
+    /* Secondary — muted paper */
+    --secondary: 44 16% 90%;
+    --secondary-foreground: 222 24% 16%;
 
-    /* Muted - Subtle backgrounds */
-    --muted: 217 33% 12%;
-    --muted-foreground: 215 20% 65%;
+    /* Muted — subtle backgrounds + secondary text (ink-2) */
+    --muted: 44 18% 92%;
+    --muted-foreground: 222 12% 40%;
 
-    /* Accent - Muted Crimson (used sparingly) */
-    --accent: 0 72% 51%;
-    --accent-foreground: 210 20% 98%;
+    /* Accent — same red family */
+    --accent: 4 68% 47%;
+    --accent-foreground: 45 24% 97%;
 
     /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 4 72% 45%;
+    --destructive-foreground: 45 24% 97%;
 
-    /* Borders and inputs */
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
+    /* Borders and inputs — hairline rule */
+    --border: 42 14% 84%;
+    --input: 42 14% 84%;
+    --ring: 4 68% 47%;
 
-    --radius: 0.75rem;
+    /* Swiss = sharp corners */
+    --radius: 0.125rem;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(200 95% 50%));
-    --gradient-accent: linear-gradient(135deg, hsl(0 72% 51%), hsl(350 80% 45%));
-    --gradient-surface: linear-gradient(180deg, hsl(222 47% 8%), hsl(222 47% 6%));
-    --shadow-glow: 0 0 60px -15px hsl(217 91% 60% / 0.3);
-    --shadow-card: 0 25px 50px -12px hsl(222 47% 3% / 0.5);
-    --shadow-elevated: 0 10px 40px -10px hsl(222 47% 3% / 0.6);
+    --rule: 42 14% 84%;
+    --gradient-primary: none;
+    --gradient-accent: none;
+    --gradient-surface: none;
+    --shadow-glow: none;
+    --shadow-card: 0 1px 0 0 hsl(42 14% 84%);
+    --shadow-elevated: 0 8px 30px -18px hsl(222 24% 14% / 0.25);
   }
 
   * {
@@ -67,11 +73,13 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: var(--font-inter);
+    font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight text-foreground;
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 
   h1 {
@@ -109,11 +117,22 @@
   }
 
   .card {
-    @apply rounded-xl border border-border bg-card p-6 transition-all duration-300;
+    @apply rounded-sm border border-border bg-card p-6 transition-colors duration-200;
   }
 
   .card:hover {
-    @apply border-primary/30 shadow-elevated;
+    @apply border-foreground/30;
+  }
+
+  /* Swiss grid: 1px gap reveals the rule color as crisp hairlines */
+  .swiss-grid {
+    @apply grid border border-border;
+    gap: 1px;
+    background-color: hsl(var(--rule));
+  }
+
+  .swiss-grid > * {
+    @apply bg-background;
   }
 }
 
@@ -122,22 +141,23 @@
     text-wrap: balance;
   }
 
+  /* Swiss: no gradient text. Signature phrase gets a red underline instead. */
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
+    color: hsl(var(--foreground));
+    box-shadow: inset 0 -0.12em 0 hsl(var(--accent));
+    padding-bottom: 0.02em;
   }
 
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-accent);
+    color: hsl(var(--accent));
   }
 
   .bg-gradient-primary {
-    background-image: var(--gradient-primary);
+    background-color: hsl(var(--foreground));
   }
 
   .bg-gradient-surface {
-    background-image: var(--gradient-surface);
+    background-color: hsl(var(--card));
   }
 
   .shadow-glow {
@@ -153,9 +173,7 @@
   }
 
   .border-gradient {
-    border: 1px solid transparent;
-    background: linear-gradient(var(--background), var(--background)) padding-box,
-                var(--gradient-primary) border-box;
+    border: 1px solid hsl(var(--border));
   }
 }
 

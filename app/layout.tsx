@@ -1,46 +1,39 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { SITE_CONFIG } from '@/lib/constants';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL('https://thardigital.in'),
+  metadataBase: new URL('https://thar.digital'),
   title: {
-    default: 'Thar Digital Services | Enterprise Engineering Teams for Startups',
+    default: 'Thar Digital Services | Bank-Grade Fintech Infrastructure',
     template: '%s | Thar Digital Services',
   },
-  description: 'Thar Digital Services helps ambitious startups and growing companies build, scale, and operate reliable software products with enterprise-level engineering teams.',
+  description: 'Thar Digital Services is a fintech infrastructure partner building white-label payment ecosystems and eBill integrations that pass Swiss bank security audits — on EBICS, QR-bill, and ISO 20022 standards.',
   keywords: [
-    'dedicated engineering teams',
-    'startup software development',
-    'enterprise software development',
-    'offshore engineering teams',
-    'software development partner',
-    'backend development',
-    'cloud devops',
-    'system architecture',
+    'fintech infrastructure',
+    'white-label banking',
+    'eBill integration',
+    'EBICS integration',
+    'Swiss QR-bill',
+    'ISO 20022',
+    'payment microservices',
+    'bank-grade security',
   ],
   authors: [{ name: 'Thar Digital Services' }],
   creator: 'Thar Digital Services',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://thardigital.in',
+    url: 'https://thar.digital',
     siteName: 'Thar Digital Services',
-    title: 'Thar Digital Services | Enterprise Engineering Teams for Startups',
-    description: 'Enterprise-level engineering teams for ambitious startups and scale-ups.',
+    title: 'Thar Digital Services | Bank-Grade Fintech Infrastructure',
+    description: 'White-label payment ecosystems and eBill integrations that pass Swiss bank security audits.',
     images: [
       {
-        url: 'https://thardigital.in/images/logos/logo-dark.png',
+        url: 'https://thar.digital/images/logos/logo-dark.png',
         width: 1200,
         height: 630,
         alt: 'Thar Digital Services',
@@ -49,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Thar Digital Services | Enterprise Engineering Teams for Startups',
-    description: 'Enterprise-level engineering teams for ambitious startups and scale-ups.',
+    title: 'Thar Digital Services | Bank-Grade Fintech Infrastructure',
+    description: 'White-label payment ecosystems and eBill integrations that pass Swiss bank security audits.',
     creator: '@thardigitalsvcs',
     site: '@thardigitalsvcs',
   },
@@ -75,7 +68,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0A1A2E',
+  themeColor: '#F2F0E9',
 };
 
 export default function RootLayout({
@@ -90,20 +83,11 @@ export default function RootLayout({
     url: SITE_CONFIG.url,
     logo: `${SITE_CONFIG.url}/images/logos/logo-dark.png`,
     description: SITE_CONFIG.description,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: `${SITE_CONFIG.address.line1}, ${SITE_CONFIG.address.line2}, ${SITE_CONFIG.address.line3}`,
-      addressLocality: SITE_CONFIG.address.city,
-      addressRegion: SITE_CONFIG.address.state,
-      postalCode: SITE_CONFIG.address.zip,
-      addressCountry: SITE_CONFIG.address.country,
-    },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: SITE_CONFIG.phone.replace(/\s/g, '-'),
-      contactType: 'Customer Service',
+      contactType: 'Sales',
       email: SITE_CONFIG.email,
-      areaServed: 'Worldwide',
+      areaServed: ['CH', 'EU', 'Worldwide'],
       availableLanguage: 'English',
     },
     sameAs: [
@@ -116,7 +100,16 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground">
         <Script
           id="organization-schema"

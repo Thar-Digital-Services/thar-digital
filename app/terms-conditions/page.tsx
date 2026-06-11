@@ -33,13 +33,13 @@ export default function TermsConditionsPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Terms and Conditions',
-        item: 'https://thardigital.in/terms-conditions',
+        item: 'https://thar.digital/terms-conditions',
       },
     ],
   };

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Services',
   description: 'Comprehensive engineering services: Dedicated teams, backend development, cloud & DevOps, frontend, system architecture, data engineering, and security.',
   alternates: {
-    canonical: 'https://thardigital.in/services',
+    canonical: 'https://thar.digital/services',
   },
 };
 
@@ -19,13 +19,13 @@ export default function ServicesPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Services',
-        item: 'https://thardigital.in/services',
+        item: 'https://thar.digital/services',
       },
     ],
   };

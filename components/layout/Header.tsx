@@ -10,13 +10,13 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-xl border-t-[3px] border-t-primary border-b border-border">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
             <Image
-              src="/images/logos/logo-white.png"
+              src="/images/logos/logo-dark.png"
               alt="Thar Digital Services"
               width={120}
               height={50}

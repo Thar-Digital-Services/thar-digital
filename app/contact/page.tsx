@@ -39,13 +39,13 @@ export default function ContactPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Contact',
-        item: 'https://thardigital.in/contact',
+        item: 'https://thar.digital/contact',
       },
     ],
   };

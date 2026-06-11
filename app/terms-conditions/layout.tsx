@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Terms and Conditions',
   description: 'Terms and Conditions for Thar Digital Services',
   alternates: {
-    canonical: 'https://thardigital.in/terms-conditions',
+    canonical: 'https://thar.digital/terms-conditions',
   },
 };
 

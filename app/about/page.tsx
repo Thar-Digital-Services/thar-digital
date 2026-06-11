@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn about Thar Digital Services: our mission, leadership philosophy, engineering culture, and meet our team.',
   alternates: {
-    canonical: 'https://thardigital.in/about',
+    canonical: 'https://thar.digital/about',
   },
 };
 
@@ -24,13 +24,13 @@ export default function AboutPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'About',
-        item: 'https://thardigital.in/about',
+        item: 'https://thar.digital/about',
       },
     ],
   };

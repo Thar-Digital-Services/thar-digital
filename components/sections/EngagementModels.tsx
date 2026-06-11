@@ -80,9 +80,9 @@ export default function EngagementModels() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="h-full p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                    <IconComponent className="w-7 h-7 text-primary" />
+                <div className="h-full p-8 rounded-sm bg-card border border-border hover:border-foreground/30 transition-colors duration-200">
+                  <div className="w-12 h-12 rounded-sm bg-primary/10 flex items-center justify-center mb-6">
+                    <IconComponent className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-foreground">
                     {model.title}

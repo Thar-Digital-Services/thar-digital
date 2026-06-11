@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Legal Notice',
   description: 'Legal Notice for Thar Digital Services',
   alternates: {
-    canonical: 'https://thardigital.in/legal-notice',
+    canonical: 'https://thar.digital/legal-notice',
   },
 };
 

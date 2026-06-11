@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/images/logos/logo-white.png"
+                src="/images/logos/logo-dark.png"
                 alt="Thar Digital Services"
                 width={150}
                 height={60}
@@ -184,7 +184,7 @@ export default function Footer() {
               © 2026 Thar Digital Services. All rights reserved.
             </p>
             <p className="text-muted-foreground/70 text-xs">
-              Crafted with ❤️ By Tech Team - TDS, India
+              Fintech Infrastructure Partner · Global delivery, Swiss-market track record
             </p>
           </div>
         </div>

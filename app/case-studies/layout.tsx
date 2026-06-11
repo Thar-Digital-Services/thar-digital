@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Case Studies',
   description: 'Anonymized technical teardowns of the fintech infrastructure we have shipped — eBill integrations, white-label billing platforms, and cloud-native payment microservices.',
   alternates: {
-    canonical: 'https://thardigital.in/case-studies',
+    canonical: 'https://thar.digital/case-studies',
   },
 };
 

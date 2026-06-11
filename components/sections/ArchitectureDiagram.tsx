@@ -1,57 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Landmark,
-  ShieldCheck,
-  Network,
-  ArrowLeftRight,
-  KeyRound,
-  FileCode2,
-  QrCode,
-  Send,
-  Users,
-} from 'lucide-react';
 
-const partnerBlocks = [
-  { icon: Send, label: 'EBICS Client' },
-  { icon: KeyRound, label: 'Signing / KMS' },
-  { icon: FileCode2, label: 'ISO 20022' },
-  { icon: QrCode, label: 'QR-bill' },
-];
-
-function Node({
-  icon: Icon,
-  title,
-  subtitle,
-}: {
-  icon: typeof Landmark;
-  title: string;
-  subtitle: string;
-}) {
-  return (
-    <div className="flex-1 min-w-[200px] rounded-2xl bg-card border border-border p-6 text-center">
-      <div className="w-12 h-12 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-        <Icon className="w-6 h-6 text-primary" />
-      </div>
-      <h3 className="font-semibold text-foreground">{title}</h3>
-      <p className="text-xs text-muted-foreground mt-1">{subtitle}</p>
-    </div>
-  );
-}
-
-function Connector() {
-  return (
-    <div className="flex items-center justify-center px-2 py-2 lg:py-0">
-      <ArrowLeftRight className="w-6 h-6 text-primary/60 rotate-90 lg:rotate-0" />
-    </div>
-  );
-}
+const partnerBlocks = ['EBICS client', 'Signing / KMS', 'ISO 20022', 'QR-bill'];
 
 export default function ArchitectureDiagram() {
   return (
-    <section className="section-padding relative">
-      <div className="container-custom relative z-10">
+    <section className="section-padding bg-card">
+      <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,16 +15,16 @@ export default function ArchitectureDiagram() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mb-12"
         >
-          <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Reference Architecture
+          <span className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+            <span className="h-px w-7 bg-primary" />
+            Reference architecture
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            The secure partner layer
+          <h2 className="font-display text-3xl md:text-4xl font-semibold mt-5 mb-5">
+            The secure partner layer.
           </h2>
           <p className="text-muted-foreground text-lg">
-            A representative, anonymized view of how we bridge a core banking
-            system to the national eBill network — the seam where security audits
-            are won or lost.
+            An anonymized view of how we bridge a core banking system to the
+            national eBill network — the seam where security audits are won or lost.
           </p>
         </motion.div>
 
@@ -77,69 +33,46 @@ export default function ArchitectureDiagram() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-3xl border border-border bg-card/40 backdrop-blur-sm p-6 md:p-10"
+          className="grid grid-cols-1 items-stretch gap-3 lg:grid-cols-[1fr_auto_1.5fr_auto_1fr]"
         >
-          {/* Main flow */}
-          <div className="flex flex-col lg:flex-row items-stretch justify-center gap-2">
-            <Node
-              icon={Landmark}
-              title="Core Banking System"
-              subtitle="Financial institution"
-            />
-            <Connector />
+          {/* Core banking */}
+          <div className="border border-border bg-background p-6">
+            <h3 className="font-display font-semibold">Core Banking System</h3>
+            <p className="text-sm text-muted-foreground mt-1">Financial institution</p>
+          </div>
 
-            {/* Partner layer (highlighted) */}
-            <div className="flex-[1.4] min-w-[240px] rounded-2xl bg-primary/5 border-2 border-primary/40 p-6">
-              <div className="text-center mb-5">
-                <div className="w-12 h-12 mx-auto rounded-xl bg-primary/15 flex items-center justify-center mb-3">
-                  <ShieldCheck className="w-6 h-6 text-primary" />
+          <div className="flex items-center justify-center text-primary text-xl font-bold rotate-90 lg:rotate-0">
+            ⇄
+          </div>
+
+          {/* Partner layer (highlighted) */}
+          <div className="border-2 border-foreground bg-background p-6">
+            <h3 className="font-display font-semibold">Secure Partner Layer</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              OAuth2 / JWT · mTLS · audit logging
+            </p>
+            <div className="swiss-grid grid-cols-2 mt-4">
+              {partnerBlocks.map((b) => (
+                <div
+                  key={b}
+                  className="px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.1em] text-muted-foreground"
+                >
+                  {b}
                 </div>
-                <h3 className="font-semibold text-foreground">
-                  Secure Partner Layer
-                </h3>
-                <p className="text-xs text-muted-foreground mt-1">
-                  OAuth2 / JWT · mTLS · audit logging
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {partnerBlocks.map((block) => {
-                  const Icon = block.icon;
-                  return (
-                    <div
-                      key={block.label}
-                      className="flex items-center gap-2 rounded-lg bg-card border border-border px-3 py-2"
-                    >
-                      <Icon className="w-4 h-4 text-primary shrink-0" />
-                      <span className="text-xs text-foreground">
-                        {block.label}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
+              ))}
             </div>
-
-            <Connector />
-            <Node
-              icon={Network}
-              title="National eBill Network"
-              subtitle="≈95% of Swiss financial institutions"
-            />
           </div>
 
-          {/* Portals fan-off */}
-          <div className="flex justify-center mt-2">
-            <ArrowLeftRight className="w-6 h-6 text-primary/60 rotate-90" />
+          <div className="flex items-center justify-center text-primary text-xl font-bold rotate-90 lg:rotate-0">
+            ⇄
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-2">
-            <div className="flex items-center gap-2 rounded-xl bg-card border border-border px-5 py-3">
-              <Users className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Biller Portal</span>
-            </div>
-            <div className="flex items-center gap-2 rounded-xl bg-card border border-border px-5 py-3">
-              <Users className="w-4 h-4 text-primary" />
-              <span className="text-sm text-foreground">Payer Portal</span>
-            </div>
+
+          {/* eBill network */}
+          <div className="border border-border bg-background p-6">
+            <h3 className="font-display font-semibold">National eBill Network</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              ≈95% of Swiss financial institutions
+            </p>
           </div>
         </motion.div>
       </div>

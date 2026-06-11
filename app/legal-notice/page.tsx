@@ -34,13 +34,13 @@ export default function LegalNoticePage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Legal Notice',
-        item: 'https://thardigital.in/legal-notice',
+        item: 'https://thar.digital/legal-notice',
       },
     ],
   };

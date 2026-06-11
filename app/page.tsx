@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Bank-Grade Fintech Infrastructure',
   description: 'Thar Digital Services builds white-label payment ecosystems and eBill integrations that pass Swiss bank security audits — on EBICS, QR-bill, and ISO 20022 standards.',
   alternates: {
-    canonical: 'https://thardigital.in',
+    canonical: 'https://thar.digital',
   },
 };
 
@@ -26,7 +26,7 @@ export default function HomePage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://thardigital.in',
+        item: 'https://thar.digital',
       },
     ],
   };

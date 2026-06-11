@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with Thar Digital Services. Book a free discovery call or send us a message.',
   alternates: {
-    canonical: 'https://thardigital.in/contact',
+    canonical: 'https://thar.digital/contact',
   },
 };
 
