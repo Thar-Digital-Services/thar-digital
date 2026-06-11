@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
-  description: 'Real examples of how we help startups and scale-ups build, scale, and operate reliable software products.',
+  description: 'Anonymized technical teardowns of the fintech infrastructure we have shipped — eBill integrations, white-label billing platforms, and cloud-native payment microservices.',
   alternates: {
     canonical: 'https://thardigital.in/case-studies',
   },

@@ -4,8 +4,8 @@
 
 export const SITE_CONFIG = {
   name: 'Thar Digital Services',
-  tagline: 'Enterprise-level engineering teams for ambitious startups',
-  description: 'Thar Digital Services helps ambitious startups and growing companies build, scale, and operate reliable software products with enterprise-level engineering teams.',
+  tagline: 'Bank-grade fintech infrastructure for the European market',
+  description: 'Thar Digital Services is a fintech infrastructure partner. We build white-label payment ecosystems and eBill integrations engineered to meet the security requirements of Swiss bank audits — on the EBICS, QR-bill, and ISO 20022 standards that run Switzerland\'s national payment rails.',
   url: 'https://thardigital.in',
   email: 'tech@thardigital.in',
   phone: '+91 90790 92676',
@@ -24,46 +24,40 @@ export const SITE_CONFIG = {
 
 export const SERVICES = [
   {
-    id: 'dedicated-teams',
-    title: 'Dedicated Engineering Teams',
-    description: 'Long-term, integrated engineering teams that become an extension of your company.',
-    icon: '👥',
+    id: 'white-label-banking',
+    title: 'White-Label Banking & Billing',
+    description: 'White-label payment ecosystems and digital billing platforms that fintechs and banks ship under their own brand.',
+    icon: '🏦',
   },
   {
-    id: 'backend-api',
-    title: 'Backend & API Development',
-    description: 'Scalable, secure backend systems and RESTful/GraphQL APIs built with best practices.',
+    id: 'payment-standards',
+    title: 'Swiss Payment-Standard Integration',
+    description: 'Native integration with EBICS v2.5/v3, the eBill network, Swiss QR-bill, and ISO 20022 (camt/pain) messaging.',
+    icon: '🔗',
+  },
+  {
+    id: 'secure-microservices',
+    title: 'High-Security Microservices',
+    description: 'Event-driven services in Java Spring Boot and Kotlin/Vert.x, built for high-concurrency payment volumes.',
     icon: '⚙️',
   },
   {
-    id: 'cloud-devops',
-    title: 'Cloud & DevOps',
-    description: 'AWS, GCP, and Azure infrastructure, CI/CD pipelines, and infrastructure as code.',
+    id: 'compliance-architecture',
+    title: 'Compliance-Ready Architecture',
+    description: 'Architectures engineered to pass bank security audits — encryption, key management, and audit logging by design.',
+    icon: '🛡️',
+  },
+  {
+    id: 'cloud-native-devops',
+    title: 'Cloud-Native DevOps',
+    description: 'Kubernetes on GKE with ArgoCD GitOps and Terraform IaC across GCP and AWS, with Swiss/EU data residency.',
     icon: '☁️',
   },
   {
-    id: 'frontend',
-    title: 'Frontend Development',
-    description: 'Modern web and mobile applications with React, Next.js, React Native, and Flutter.',
-    icon: '💻',
-  },
-  {
-    id: 'architecture',
-    title: 'System Architecture & Scalability',
-    description: 'Design and implement scalable, maintainable system architectures for growth.',
-    icon: '🏗️',
-  },
-  {
-    id: 'data-engineering',
-    title: 'Data Engineering & Integrations',
-    description: 'Data pipelines, ETL processes, and third-party API integrations.',
-    icon: '📊',
-  },
-  {
-    id: 'security',
-    title: 'Security & Compliance',
-    description: 'Security audits, compliance readiness (SOC 2, GDPR), and secure development practices.',
-    icon: '🔒',
+    id: 'dedicated-fintech-teams',
+    title: 'Dedicated Fintech Teams',
+    description: 'Long-term engineering teams led by an architect, integrated as an extension of your fintech.',
+    icon: '👥',
   },
 ] as const;
 

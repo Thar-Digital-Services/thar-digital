@@ -4,51 +4,51 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  Users,
+  Landmark,
+  Network,
   Server,
+  ShieldCheck,
   Cloud,
-  Layout,
-  Database,
-  Shield,
+  Users,
   ArrowRight,
 } from 'lucide-react';
 
 const services = [
   {
-    icon: Users,
-    title: 'Dedicated Engineering Teams',
+    icon: Landmark,
+    title: 'White-Label Banking & Billing',
     description:
-      'Full-time engineers who integrate seamlessly with your team, bringing senior expertise and ownership mindset.',
+      'White-label payment ecosystems and digital billing platforms that fintechs and banks ship under their own brand.',
+  },
+  {
+    icon: Network,
+    title: 'Swiss Payment-Standard Integration',
+    description:
+      'Native integration with EBICS v2.5/v3, the eBill network, Swiss QR-bill, and ISO 20022 (camt/pain) messaging.',
   },
   {
     icon: Server,
-    title: 'Backend & API Development',
+    title: 'High-Security Microservices',
     description:
-      'Scalable, secure backend systems designed for performance. RESTful and GraphQL APIs built to last.',
+      'Event-driven services in Java Spring Boot and Kotlin/Vert.x, built for high-concurrency payment volumes.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Compliance-Ready Architecture',
+    description:
+      'Architectures engineered to pass bank security audits — encryption, key management, and audit logging by design.',
   },
   {
     icon: Cloud,
-    title: 'Cloud & DevOps',
+    title: 'Cloud-Native DevOps',
     description:
-      'AWS, GCP, and Azure infrastructure. CI/CD pipelines, containerization, and infrastructure as code.',
+      'Kubernetes on GKE with ArgoCD GitOps and Terraform IaC across GCP and AWS, with Swiss/EU data residency.',
   },
   {
-    icon: Layout,
-    title: 'Frontend Development',
+    icon: Users,
+    title: 'Dedicated Fintech Teams',
     description:
-      'Modern web and mobile experiences. React, Vue, React Native with pixel-perfect implementation.',
-  },
-  {
-    icon: Database,
-    title: 'System Architecture',
-    description:
-      'Scalable architecture design for high-growth products. Microservices, event-driven systems, and more.',
-  },
-  {
-    icon: Shield,
-    title: 'Security & Compliance',
-    description:
-      'SOC 2, GDPR, and HIPAA readiness. Security-first development practices and regular audits.',
+      'Long-term engineering teams led by an architect, integrated as an extension of your fintech.',
   },
 ];
 
@@ -97,14 +97,14 @@ export default function ServicesSection() {
           className="max-w-2xl mb-16"
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">
-            Our Services
+            What We Build
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
-            Full-stack engineering expertise
+            Fintech infrastructure, end to end
           </h2>
           <p className="text-muted-foreground text-lg">
-            From architecture to deployment, we cover every layer of modern
-            software development with enterprise-grade standards.
+            From national payment-rail integration to bank-grade security and
+            cloud-native delivery — we cover every layer of a regulated fintech platform.
           </p>
         </motion.div>
 

@@ -56,7 +56,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/50 backdrop-blur-sm mb-8 md:mb-10"
             >
               <span className="text-sm text-muted-foreground font-medium">
-                Enterprise-grade engineering for startups
+                Swiss-standard fintech infrastructure
               </span>
             </motion.div>
 
@@ -67,9 +67,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 md:mb-10"
             >
-              Build and scale with{' '}
+              Bank-grade{' '}
               {/* <br className="hidden sm:block" /> */}
-              <span className="text-gradient">reliable engineering</span> teams
+              <span className="text-gradient">fintech infrastructure</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -79,7 +79,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed"
             >
-              Enterprise-level teams for ambitious startups. We design, operate, and scale production-ready systems.
+              We build white-label payment ecosystems and eBill integrations that pass rigorous Swiss bank security audits — engineered on the EBICS, QR-bill, and ISO 20022 standards that run Switzerland&apos;s national payment rails.
             </motion.p>
 
             {/* CTAs */}
@@ -89,9 +89,12 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16"
             >
-              
+              <Button variant="hero" size="xl" href="/case-studies">
+                Read the case studies
+                <ArrowRight className="w-5 h-5" />
+              </Button>
               <Button variant="heroOutline" size="xl" href="/services">
-                View Our Services
+                Our capabilities
               </Button>
             </motion.div>
 
@@ -103,9 +106,9 @@ export default function Hero() {
               className="flex flex-wrap gap-10 md:gap-16 lg:gap-20 justify-center"
             >
               {[
-                { value: '5+', label: 'Years Experience' },
-                { value: '50+', label: 'Projects Delivered' },
-                { value: '100%', label: 'Client Satisfaction' },
+                { value: '100%', label: 'Bank security-audit pass rate' },
+                { value: 'EBICS v2.5 + v3', label: 'Payment standards integrated' },
+                { value: 'Multi-cloud', label: 'GKE + AWS infrastructure' },
               ].map((stat, index) => (
                 <div key={index} className="flex flex-col">
                   <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">
