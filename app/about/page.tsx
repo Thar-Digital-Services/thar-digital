@@ -73,9 +73,9 @@ export default function AboutPage() {
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
               We are a specialized engineering boutique bridging the gap between
-              fast-moving fintech platforms and rigid national payment rails. We do
-              not just supply developers — we provide architect-led teams that
-              design, build, and deploy infrastructure capable of passing the
+              fast-moving fintech platforms and rigid national payment rails. You
+              focus on your product and customer acquisition; we build the
+              bank-grade backend plumbing — architect-led — engineered to pass the
               strictest Cantonal bank security audits.
             </p>
           </div>

@@ -26,7 +26,7 @@ export const SERVICES = [
   {
     id: 'white-label-banking',
     title: 'White-Label Banking & Billing',
-    description: 'White-label payment ecosystems and digital billing platforms that fintechs and banks ship under their own brand.',
+    description: 'White-label payment ecosystems and digital billing platforms that scaling fintechs ship under their own brand.',
     icon: '🏦',
   },
   {

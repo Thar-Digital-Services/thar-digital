@@ -106,7 +106,7 @@ export default function Hero() {
             <div className="swiss-grid mx-auto max-w-4xl grid-cols-1 sm:grid-cols-3">
               {[
                 'A leading Swiss digital billing provider',
-                'Regional Swiss cantonal banks',
+                'Integrated with Swiss Cantonal Banks',
                 'Enterprise fintech ecosystems',
               ].map((label) => (
                 <div

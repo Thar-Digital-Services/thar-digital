@@ -8,7 +8,7 @@ const services = [
   {
     title: 'White-Label Banking & Billing Platforms',
     description:
-      'Multi-tenant biller, payer, and admin portals that fintechs and banks ship under their own brand — web and mobile.',
+      'Multi-tenant biller, payer, and admin portals that scaling fintechs ship under their own brand — web and mobile.',
     stack: ['Vue.js', 'Vuetify', 'Node.js', 'Flutter'],
   },
   {

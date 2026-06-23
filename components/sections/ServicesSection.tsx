@@ -6,7 +6,7 @@ const services = [
   {
     title: 'White-Label Banking & Billing',
     description:
-      'Payment ecosystems and digital billing platforms that fintechs and banks ship under their own brand.',
+      'Payment ecosystems and digital billing platforms that scaling fintechs ship under their own brand.',
   },
   {
     title: 'European Payment-Standard Integration',
