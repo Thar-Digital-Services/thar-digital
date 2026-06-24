@@ -80,7 +80,6 @@ export const ENGAGEMENT_MODELS = [
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Audit', href: '/audit' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

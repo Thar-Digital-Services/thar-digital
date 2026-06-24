@@ -65,3 +65,6 @@ Thumbs.db
 /feed/
 /comments/
 /index.html
+
+# generated marketing assets
+marketing/*.pdf

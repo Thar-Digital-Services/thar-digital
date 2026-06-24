@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { NAV_ITEMS } from '@/lib/constants';
+import { Button } from '@/components/ui/Button';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,6 +37,9 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <Button variant="hero" size="default" href="/audit">
+              Book an Audit
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -66,6 +70,14 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
+              <Button
+                variant="hero"
+                size="default"
+                href="/audit"
+                className="w-full"
+              >
+                Book an Audit
+              </Button>
             </div>
           </div>
         )}

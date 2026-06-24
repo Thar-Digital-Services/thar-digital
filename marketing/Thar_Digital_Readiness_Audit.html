@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Thar Digital — Swiss Payment-Rails Readiness Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#fbfbf9; --ink:#16181f; --ink2:#5a606e; --rule:#dcdbd4; --accent:#c0392b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#e9e9e5}
+  body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .display{font-family:'Archivo Expanded','Archivo',sans-serif}
+  .page{
+    width:210mm;min-height:297mm;margin:12px auto;background:var(--paper);
+    padding:18mm 18mm 14mm;display:flex;flex-direction:column;
+  }
+  .topbar{height:6px;background:var(--accent);margin:-18mm -18mm 10mm}
+  .head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:14px}
+  .mark{font-family:'Archivo Expanded';font-weight:800;letter-spacing:-.02em;font-size:15pt}
+  .mark .d{color:var(--accent)}
+  .headmeta{font-size:8pt;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);font-weight:700}
+  h1{font-family:'Archivo Expanded';font-weight:700;font-size:21pt;line-height:1.04;letter-spacing:-.02em;margin-bottom:4px}
+  .sub{font-size:11.5pt;color:var(--accent);font-weight:600;margin-bottom:12px}
+  .lead{font-size:9.5pt;color:var(--ink2);margin-bottom:16px;max-width:62ch}
+  .lead strong{color:var(--ink);font-weight:600}
+  .kicker{font-size:8pt;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:8px;margin:14px 0 8px}
+  .kicker::before{content:"";width:18px;height:2px;background:var(--accent)}
+  .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+  .steps .c{background:var(--paper);padding:9px 11px}
+  .steps .n{font-family:'Archivo Expanded';font-weight:700;color:var(--accent);font-size:9pt}
+  .steps .t{font-weight:600;font-size:9.5pt;margin:3px 0 2px}
+  .steps .d{font-size:8pt;color:var(--ink2);line-height:1.4}
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+  .deliv .c{background:var(--paper);padding:9px 12px}
+  .deliv .t{font-weight:600;font-size:9.5pt;margin-bottom:2px}
+  .deliv .t span{color:var(--accent);font-family:'Archivo Expanded';font-weight:700;margin-right:6px}
+  .deliv .d{font-size:8pt;color:var(--ink2);line-height:1.42}
+  .invest{margin-top:16px;border:1.5px solid var(--ink);padding:12px 14px;display:flex;gap:18px;align-items:flex-start}
+  .invest .fee{flex:0 0 auto}
+  .invest .fee .lbl{font-size:8pt;text-transform:uppercase;letter-spacing:.14em;color:var(--ink2);font-weight:700}
+  .invest .fee .amt{font-family:'Archivo Expanded';font-weight:800;font-size:17pt;letter-spacing:-.01em;margin-top:2px}
+  .invest .g{font-size:8.5pt;color:var(--ink2);border-left:2px solid var(--accent);padding-left:12px}
+  .invest .g b{color:var(--ink);font-weight:600}
+  .foot{margin-top:auto;padding-top:12px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;font-size:8.5pt;color:var(--ink2)}
+  .foot b{color:var(--ink);font-weight:600}
+  @page{size:A4;margin:0}
+  @media print{html,body{background:#fff}.page{margin:0;box-shadow:none}}
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar"></div>
+    <div class="head">
+      <div class="mark">Thar Digital<span class="d">.</span></div>
+      <div class="headmeta">Executive Briefing · Fintech Infrastructure</div>
+    </div>
+
+    <h1>Swiss Payment-Rails Readiness Audit</h1>
+    <div class="sub">The 14-Day Architecture &amp; Compliance Blueprint for DACH Expansion</div>
+
+    <p class="lead">
+      Most engineering teams drastically underestimate the compliance and cryptographic
+      requirements of Swiss/EU legacy payment rails. Without domain expertise, integrating
+      <strong>EBICS v3</strong>, the <strong>SIX eBill network</strong>, and
+      <strong>ISO&nbsp;20022</strong> message parsers results in stalled launches, failed
+      Cantonal bank audits, and wasted engineering months. Thar Digital Services provides a
+      fixed-scope, 14-day architectural review that removes the guesswork — giving your team
+      the exact blueprint to connect to the rails and pass the security audit on the first try.
+    </p>
+
+    <div class="kicker">The 14-Day Process</div>
+    <div class="steps">
+      <div class="c"><div class="n">01</div><div class="t">Discovery &amp; Stack Review</div><div class="d">A deep-dive with your lead engineers: target rails, current microservices, and timeline.</div></div>
+      <div class="c"><div class="n">02</div><div class="t">Threat Modeling &amp; Gap Analysis</div><div class="d">We evaluate your infrastructure against Cantonal bank requirements — HSM, mTLS, data residency.</div></div>
+      <div class="c"><div class="n">03</div><div class="t">The Blueprint Readout</div><div class="d">We deliver the technical roadmap and walk your leadership through the execution plan.</div></div>
+    </div>
+
+    <div class="kicker">Your 6 Executive Deliverables</div>
+    <div class="deliv">
+      <div class="c"><div class="t"><span>01</span>Integration Architecture Map</div><div class="d">The exact microservice boundaries to connect your core systems to the national rails securely.</div></div>
+      <div class="c"><div class="t"><span>02</span>Security &amp; Compliance Gap Report</div><div class="d">A strict audit of your encryption, key management, and OAuth2/JWT implementation.</div></div>
+      <div class="c"><div class="t"><span>03</span>ISO 20022 Data Mapping</div><div class="d">Schema requirements for your specific camt.053/054 and pain.001 message flows.</div></div>
+      <div class="c"><div class="t"><span>04</span>EBICS &amp; eBill Onboarding Sequence</div><div class="d">The exact administrative steps for bank agreements and subscriber key ceremonies (INI/HIA).</div></div>
+      <div class="c"><div class="t"><span>05</span>Build Estimate &amp; Risk Matrix</div><div class="d">A realistic calculation of the engineering sprints required to build the integration.</div></div>
+      <div class="c"><div class="t"><span>06</span>Go / No-Go Recommendation</div><div class="d">A definitive ruling on feasibility, with a reference architecture you own.</div></div>
+    </div>
+
+    <div class="invest">
+      <div class="fee">
+        <div class="lbl">Fixed Assessment Fee</div>
+        <div class="amt">€3,500 – €5,000</div>
+      </div>
+      <div class="g">
+        <b>The Build-Credit Guarantee.</b> You retain 100% ownership of the architecture
+        blueprint to hand to your internal team. If you retain Thar Digital Services to
+        execute the build, the entire audit fee is credited toward your first integration invoice.
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>Start the conversation: <b>tech@thar.digital</b></div>
+      <div><b>thar.digital/audit</b> · Global delivery, Swiss-market track record</div>
+    </div>
+  </div>
+</body>
+</html>

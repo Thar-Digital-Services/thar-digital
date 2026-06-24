@@ -7,52 +7,52 @@ import { ArrowRight } from 'lucide-react';
 
 const deliverables = [
   {
-    title: 'Integration architecture map',
+    title: 'Integration Architecture Map',
     description:
-      'A clear diagram of how your systems connect to the national payment rails — the secure partner layer, data flows, and the seams that matter.',
+      'The exact microservice boundaries required to connect your core systems to the national payment rails securely.',
   },
   {
-    title: 'EBICS & eBill onboarding plan',
+    title: 'Security & Compliance Gap Report',
     description:
-      'Exactly what to request from your bank: the EBICS agreement, subscriber key ceremony (INI/HIA), and eBill network steps — sequenced.',
+      'A strict audit of your encryption, key management, mTLS, and OAuth2/JWT against what a Cantonal-bank security review demands.',
   },
   {
-    title: 'ISO 20022 message gap analysis',
+    title: 'ISO 20022 Data Mapping',
     description:
-      'Which camt (053/054) and pain (001) messages you need, how they map to your data, and where the parsing/generation work sits.',
+      'The schema requirements for your specific camt.053/054 and pain.001 message flows, mapped to your data.',
   },
   {
-    title: 'Security & compliance gap report',
+    title: 'EBICS & eBill Onboarding Sequence',
     description:
-      'What a Cantonal-bank security audit will demand — encryption, key management, mTLS, audit logging, data residency — and where you fall short today.',
+      'The exact administrative steps for bank agreements and subscriber key ceremonies (INI/HIA) — sequenced.',
   },
   {
-    title: 'Effort, timeline & risk estimate',
+    title: 'Build Estimate & Risk Matrix',
     description:
-      'A realistic build estimate with the specific risks called out up front — so there are no surprises after you commit.',
+      'A realistic calculation of the engineering sprints required, with the specific risks called out up front.',
   },
   {
-    title: 'Go / no-go recommendation',
+    title: 'Go / No-Go Recommendation',
     description:
-      'A straight answer on feasibility and approach, plus a reference architecture you can hand to your team or to us.',
+      'A definitive ruling on feasibility, plus a reference architecture you own and can hand to your team.',
   },
 ];
 
 const steps = [
   {
-    title: 'Discovery call',
+    title: 'Discovery & Stack Review',
     description:
-      'A 30-minute architecture conversation — your target rails (EBICS / eBill / QR-bill), compliance bar, systems, and timeline.',
+      'A deep-dive session with your lead engineers — your target rails (EBICS / eBill / QR-bill), current microservices, and timeline.',
   },
   {
-    title: 'Review',
+    title: 'Threat Modeling & Gap Analysis',
     description:
-      'We review your requirements, current architecture, and the bank/standards involved — the same lens we use on production fintech infrastructure.',
+      'We evaluate your infrastructure against Cantonal-bank requirements — HSM-backed keys, mTLS, data residency.',
   },
   {
-    title: 'Readout',
+    title: 'The Blueprint Readout',
     description:
-      'A written deliverable pack plus a live walkthrough — you leave knowing exactly what it takes, what it costs, and whether to proceed.',
+      'We deliver the technical roadmap and walk your leadership through the execution plan — you leave knowing exactly what it takes.',
   },
 ];
 
@@ -97,14 +97,17 @@ export default function AuditPage() {
               <span className="h-px w-7 bg-primary" />
               Fixed-scope engagement
             </span>
-            <h1 className="font-display text-3xl md:text-5xl font-bold mt-5 mb-6 tracking-[-0.02em]">
+            <h1 className="font-display text-3xl md:text-5xl font-bold mt-5 mb-3 tracking-[-0.02em]">
               Swiss Payment-Rails Readiness Audit.
             </h1>
+            <p className="font-display text-lg md:text-xl text-primary font-semibold mb-5">
+              The 14-Day Architecture &amp; Compliance Blueprint for DACH expansion.
+            </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              A fixed-price, 1–2 week review that tells you exactly what it takes
-              to integrate <strong className="text-foreground font-semibold">EBICS, eBill, Swiss QR-bill and ISO 20022</strong> —
-              and pass a bank security audit — <em>before</em> you commit to a build.
-              Most teams underestimate the compliance half; this removes the guesswork.
+              Most teams drastically underestimate the compliance and cryptographic
+              requirements of Swiss/EU payment rails. We give you the exact blueprint to
+              integrate <strong className="text-foreground font-semibold">EBICS v3, the eBill network, Swiss QR-bill and ISO 20022</strong> —
+              and pass the bank security audit on the first try — <em>before</em> you commit to a build.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button variant="hero" size="xl" href="/contact">
@@ -120,8 +123,8 @@ export default function AuditPage() {
           {/* Format strip */}
           <div className="swiss-grid grid-cols-1 sm:grid-cols-3 mb-20">
             {[
-              { v: '1–2 weeks', l: 'Turnaround' },
-              { v: 'Fixed price', l: 'Quoted up front, credited toward a build' },
+              { v: '14 days', l: 'Fixed turnaround' },
+              { v: '€3,500–€5,000', l: 'Fixed fee · credited toward your build' },
               { v: 'Remote · CET overlap', l: 'Global delivery' },
             ].map((f) => (
               <div key={f.l} className="p-6">
@@ -206,7 +209,8 @@ export default function AuditPage() {
                 Find out what it really takes.
               </h2>
               <p className="text-muted-foreground text-lg mt-2">
-                Book the audit — the fee is credited toward a subsequent build engagement.
+                You keep 100% ownership of the blueprint. Retain us to build, and the entire
+                audit fee is credited toward your first integration invoice.
               </p>
             </div>
             <Button variant="hero" size="xl" href="/contact">
