@@ -124,7 +124,7 @@ export default function AuditPage() {
           <div className="swiss-grid grid-cols-1 sm:grid-cols-3 mb-20">
             {[
               { v: '14 days', l: 'Fixed turnaround' },
-              { v: '€3,500–€5,000', l: 'Fixed fee · credited toward your build' },
+              { v: 'From €3,500', l: 'Fixed-fee engagement · full credit toward your build' },
               { v: 'Remote · CET overlap', l: 'Global delivery' },
             ].map((f) => (
               <div key={f.l} className="p-6">
