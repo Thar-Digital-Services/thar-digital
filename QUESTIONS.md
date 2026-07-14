@@ -26,13 +26,13 @@ Please provide the following information:
    - [ ] Use placeholders for now
 
 6. **Case Studies**: 
-   - [ ] Have Billte case study content ready
+   - [ ] Have case study content ready
    - [ ] Use placeholder content for now
 
 7. **Tech Stack Logos**: Which technologies should we showcase? (e.g., AWS, React, Node.js, Python, Docker, Kubernetes, etc.)
 
 8. **Client Logos**: 
-   - [ ] Have Billte logo ready
+   - [ ] Have client logo ready
    - [ ] Use placeholder for now
 
 ---

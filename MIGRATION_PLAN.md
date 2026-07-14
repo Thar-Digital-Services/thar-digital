@@ -174,7 +174,7 @@ Neutrals:
 - Solution
 - Tech stack
 - Measurable outcomes
-- (Billte + placeholders)
+- (case study + placeholders)
 
 ### 6. Team Page (`/team`)
 - Engineering culture intro
@@ -285,7 +285,7 @@ Neutrals:
 4. **Analytics**: Google Analytics? Plausible? Other?
 5. **Domain**: Will continue using thardigital.in?
 6. **Team Members**: Have team member info ready, or use placeholders?
-7. **Case Studies**: Have Billte case study content ready?
+7. **Case Studies**: Have case study content ready?
 8. **Tech Stack Logos**: Which specific technologies to showcase? (AWS, React, Node.js, etc.)
 
 ---
